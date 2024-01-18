@@ -1,0 +1,18 @@
+---
+checks:
+- code: CUS001-GITHUB-REPO
+  description: Custom check to ensure the xxx
+  impact: By not having xx we can't keep track of xx
+  resolution: change the time
+  requiredTypes:
+  - resource
+  requiredLabels:
+  - azurerm_key_vault
+  severity: CRITICAL
+  matchSpec:
+    name: soft_delete_retention_days
+    action: equals
+    value: 5
+  errorMessage: The required deletion days must be 5
+  relatedLinks:
+  - http://internal.acmecorp.com/standards/azure/tagging.html
